@@ -1,0 +1,16 @@
+
+<mat-toolbar class="navbar">
+    <h2>work!</h2>
+    <div class="f"></div>
+    <div>
+     
+    <a *ngIf="userService.isLoggedIn()"  routerLink="../view-products"><span>Products</span></a>
+    
+    <!-- <a *ngIf="userService.isAdmin()" routerLink="approve"><span>Approve</span></a> -->
+    <!-- <a *ngIf="userService.isLoggedIn()" routerLink="search"><span>Search</span></a> -->
+    <a *ngIf="userService.isLoggedIn()" routerLink="../search"><span>SearchName</span></a>
+    <a *ngIf="userService.isLoggedIn()" routerLink="../searchid"><span>SearchId</span></a>
+    <a *ngIf="userService.isLoggedIn()" routerLink="../searchbrand"><span>SearchBrand</span></a>
+    <a *ngIf="userService.isLoggedIn()" (click)="logout()" routerLink="../login"><span>Logout</span></a>
+  </div>
+</mat-toolbar>
